@@ -1,96 +1,129 @@
-# Fertilizer Recommendation System
+ # 🌱 AI-Powered Fertilizer Recommendation System
 
-A complete AI-powered Flask web application that recommends fertilizer based on soil nutrients, weather values, moisture, soil type, and crop type.
+An intelligent smart farming web application that recommends the best fertilizer based on soil nutrients, weather conditions, moisture level, soil type, and crop type using Machine Learning and Flask.
 
-## Features
+🔗 **Live Demo:**  
+https://fertilizer-recommendation-system-xvo0.onrender.com
 
-- Modern responsive Bootstrap 5 UI
-- User authentication with login, registration, logout, and forgot-password reset
-- Random Forest Classifier with Scikit-learn
-- Crop recommendation model using soil nutrients, weather, temperature, and rainfall
-- SQLite prediction history
-- Weather autofill using OpenWeather API
-- English and Marathi language toggle
-- Voice input for numeric values
-- Dashboard charts with Chart.js
-- PDF recommendation report download
-- Render-ready deployment files
+🔗 **GitHub Repository:**  
+https://github.com/rutujad-28/-fertilizer-recommendation-system
 
-## Project Structure
+---
 
-```text
-fertilizer-recommendation-system/
-├── static/
-│   ├── css/
-│   ├── js/
-│   └── images/
-├── templates/
-├── model/
-│   ├── fertilizer_dataset.csv
-│   ├── train_model.py
-│   └── model.pkl
-├── database/
-│   └── fertilizer.db
-├── app.py
-├── requirements.txt
-├── Procfile
-├── render.yaml
-└── README.md
-```
+# 📌 Project Overview
 
-## Local Setup
+The Fertilizer Recommendation System is an AI-powered agriculture platform developed using Flask and Machine Learning. The system analyzes soil nutrients and environmental conditions to recommend the most suitable fertilizer for crops.
 
-1. Create and activate a virtual environment.
+This project helps farmers improve crop productivity and supports modern smart farming practices.
 
-```bash
-python -m venv .venv
-.venv\Scripts\activate
-```
+---
 
-2. Install dependencies.
+# 🚀 Features
 
-```bash
-pip install -r requirements.txt
-```
+## 🌾 Core Features
 
-3. Train the models.
+- AI-based fertilizer recommendation
+- Crop recommendation system
+- Soil nutrient analysis
+- Weather-based recommendations
+- Moisture analysis
+- Fertilizer prediction using Random Forest Classifier
 
-```bash
-python model/train_model.py
-python model/train_crop_model.py
-```
+---
 
-4. Optional: enable weather autofill.
+## 🔐 Authentication Features
 
-```bash
-set OPENWEATHER_API_KEY=your_api_key_here
-```
+- User Registration
+- Login & Logout
+- Forgot Password
+- Secure Password Hashing
 
-5. Start the Flask app.
+---
 
-```bash
-python app.py
-```
+## 🌍 Smart Farming Features
 
-Open `http://127.0.0.1:5000`.
+- OpenWeather API Integration
+- Weather Autofill
+- Soil Type Selection
+- Crop Type Selection
+- Multi-language Support (English & Marathi)
+- Voice Input Support
+
+---
+
+## 📊 Dashboard Features
+
+- Prediction Analytics
+- Fertilizer Usage Charts
+- Interactive Dashboard
+- Chart.js Graphs
+
+---
+
+## 📄 Additional Features
+
+- PDF Report Download
+- SQLite Database Integration
+- Responsive Bootstrap 5 UI
+- Modern Agriculture Theme
+- Mobile Friendly Design
+- Render Cloud Deployment
+
+---
+
+# 🛠️ Tech Stack
+
+## Frontend
+- HTML5
+- CSS3
+- Bootstrap 5
+- JavaScript
+- Chart.js
+
+## Backend
+- Python
+- Flask
+
+## Database
+- SQLite
 
 ## Machine Learning
+- Scikit-learn
+- Random Forest Classifier
+- Pandas
+- NumPy
 
-The fertilizer model uses these input columns:
+## Deployment
+- GitHub
+- Render
 
+---
+
+# 🧠 Machine Learning Models
+
+## Fertilizer Recommendation Model
+
+### Input Features
 - Nitrogen
 - Phosphorus
 - Potassium
 - Temperature
 - Humidity
 - Moisture
-- Soil_Type
-- Crop_Type
+- Soil Type
+- Crop Type
 
-The target column is `Fertilizer_Name`. Categorical values are encoded with `OneHotEncoder`, and the final classifier is `RandomForestClassifier`.
+### Output
+- Recommended Fertilizer
 
-The crop recommendation model uses:
+### Algorithm Used
+- Random Forest Classifier
 
+---
+
+## Crop Recommendation Model
+
+### Input Features
 - Nitrogen
 - Phosphorus
 - Potassium
@@ -98,19 +131,10 @@ The crop recommendation model uses:
 - Humidity
 - Rainfall
 
-The crop target column is `Crop`, trained with a Random Forest classification pipeline.
+### Output
+- Recommended Crop
 
-## Render Deployment
+### Algorithm Used
+- Random Forest Classifier
 
-This repository includes `render.yaml` and `Procfile`.
-
-Set the following environment variables on Render:
-
-- `SECRET_KEY`
-- `OPENWEATHER_API_KEY` for weather autofill
-
-The Render build command trains the model during deployment.
-
-## Notes
-
-This is an educational smart farming project. For real field usage, validate recommendations with local soil testing, crop stage, fertilizer labels, and regional agricultural guidance.
+ 
