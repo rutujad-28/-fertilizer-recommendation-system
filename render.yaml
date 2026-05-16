@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: fertilizer-recommendation-system
+    env: python
+    buildCommand: pip install -r requirements.txt && python model/train_model.py && python model/train_crop_model.py
+    startCommand: gunicorn app:app
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: OPENWEATHER_API_KEY
+        sync: false

@@ -1,0 +1,11 @@
+Flask
+gunicorn
+pandas
+numpy
+scikit-learn
+joblib
+requests
+Flask-SQLAlchemy
+Flask-Login
+Werkzeug
+reportlab
